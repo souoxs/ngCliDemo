@@ -12,4 +12,20 @@ export class EventComponent implements OnInit {
   ngOnInit() {
   }
 
+  Focus() {
+    console.log('Input - Focus');
+  }
+
+  KeyPress() {
+    console.log('Input - KeyPress');
+  }
+
+  KeyUp() {
+    console.log('Input - KeyUp');
+  }
+
+  Blur() {
+    console.log('Input - Blur');
+  }
+
 }

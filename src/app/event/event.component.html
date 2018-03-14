@@ -1,3 +1,19 @@
 <p>
   event works!
 </p>
+
+<hr />
+
+<p style="color: #249cfb">请输入卡号：</p>
+
+<div>
+  <input type="text" id="card-number" class="card-number" maxlength="35"
+    (focus)="Focus()"
+    (keypress)="KeyPress()"
+    (keyup)="KeyUp()"
+    (blur)="Blur()"
+  >
+</div>
+
+
+

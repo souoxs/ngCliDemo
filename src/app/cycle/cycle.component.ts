@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-cycle',
@@ -10,7 +10,15 @@ export class CycleComponent implements OnInit {
   @Input('UserInfo') UserInfo: string;
   @Input('tip') Tip: string;
 
-  constructor() { }
+  start_time = new Date().valueOf();
+
+  set;
+
+  @ViewChild('ImageLoad') Image: ElementRef;
+
+  constructor() {
+    console.log(this.start_time);
+  }
 
   ngOnChanges() {
     console.log('Cycle - ngOnChanges');
@@ -26,6 +34,10 @@ export class CycleComponent implements OnInit {
 
   ngAfterContentInit() {
     console.log('Cycle - ngAfterContentInit');
+    console.log(this.Image.nativeElement.naturalWidth);
+        
+    this.set = setInterval(this.check.bind(this), 40);
+
   }
 
   ngAfterContentChecked() {
@@ -38,6 +50,23 @@ export class CycleComponent implements OnInit {
 
   ngOnDestroy() {
     console.log('Cycle - ngOnDestroy');
+  }
+
+
+  check() {
+    // console.log(Image);
+    //console.log(this.Image.nativeElement);
+    if(this.Image.nativeElement.naturalWidth>0 || this.Image.nativeElement.naturalHeight>0){
+      var diff = new Date().getTime() - this.start_time;
+      clearInterval(this.set);
+      console.log(diff);
+    }
+  }
+
+  load(event) {
+    console.log(event);
+    var diff = new Date().getTime() - this.start_time;
+    console.log(diff);
   }
 
 }

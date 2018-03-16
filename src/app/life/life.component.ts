@@ -40,6 +40,10 @@ export class LifeComponent implements OnInit {
     console.log('Life - ngAfterViewInit');
   }
 
+  ngAfterViewChecked() {
+    console.log('Life - ngAfterViewChecked');
+  }
+
   ngOnDestroy() {
     console.log('Life - ngOnDestroy');
   }

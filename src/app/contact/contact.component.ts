@@ -33,6 +33,10 @@ export class ContactComponent implements OnInit {
     console.log('contact ng after view init.......');
   }
 
+  ngAfterViewChecked() {
+    console.log('contact ng after view checked.......');
+  }
+
   ngOnDestroy() {
     console.log('contact ng on destory...........');
   }

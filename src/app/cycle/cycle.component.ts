@@ -34,7 +34,6 @@ export class CycleComponent implements OnInit {
 
   ngAfterContentInit() {
     console.log('Cycle - ngAfterContentInit');
-    console.log(this.Image.nativeElement.naturalWidth);
     // this.set = setInterval(this.check.bind(this), 40);
   }
 
@@ -44,6 +43,10 @@ export class CycleComponent implements OnInit {
 
   ngAfterViewInit() {
     console.log('Cycle - ngAfterViewInit');
+  }
+
+  ngAfterViewChecked() {
+    console.log('Cycle - ngAfterViewChecked');
   }
 
   ngOnDestroy() {

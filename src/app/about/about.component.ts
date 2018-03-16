@@ -33,6 +33,10 @@ export class AboutComponent implements OnInit {
     console.log('about ng after view init.......');
   }
 
+  ngAfterViewChecked() {
+    console.log('about ng after view checked.......');
+  }
+
   ngOnDestroy() {
     console.log('about ng on destory...........');
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-index',
@@ -10,6 +10,24 @@ export class IndexComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngDoCheck() {
+    console.log('Index - ngDoCheck');
+  }
+
+  @ViewChild('title') Title: ElementRef;
+
+  ngAfterViewChecked() {
+    
+  }
+
+  ngAfterViewInit() {
+  }
+
+  Toggle() {
+    let a = Math.random() * 10 + 'red';
+    this.Title.nativeElement.className = a;
   }
 
 }

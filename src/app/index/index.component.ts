@@ -18,13 +18,6 @@ export class IndexComponent implements OnInit {
 
   @ViewChild('title') Title: ElementRef;
 
-  ngAfterViewChecked() {
-    
-  }
-
-  ngAfterViewInit() {
-  }
-
   Toggle() {
     let a = Math.random() * 10 + 'red';
     this.Title.nativeElement.className = a;

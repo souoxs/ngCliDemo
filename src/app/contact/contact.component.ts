@@ -10,35 +10,35 @@ export class ContactComponent implements OnInit {
   constructor() { }
 
   ngOnChanges() {
-    console.log('contact ng on changes.......');
+    console.log('Contact - ngOnChanges');
   }
 
   ngOnInit() {
-    console.log('contact ng on init.......');
+    console.log('Contact - ngOnInit');
   }
 
   ngDoCheck() {
-    console.log('contact ng do check.......');
+    console.log('Contact - ngDoCheck');
   }
 
   ngAfterContentInit() {
-    console.log('contact ng after content init.......');
+    console.log('Contact - ngAfterContentInit');
   }
 
   ngAfterContentChecked() {
-    console.log('contact ng after content checked.......');
+    console.log('Contact - ngAfterContentChecked');
   }
 
   ngAfterViewInit() {
-    console.log('contact ng after view init.......');
+    console.log('Contact - ngAfterViewInit');
   }
 
   ngAfterViewChecked() {
-    console.log('contact ng after view checked.......');
+    console.log('Contact - ngAfterViewChecked');
   }
 
   ngOnDestroy() {
-    console.log('contact ng on destory...........');
+    console.log('Contact - ngOnDestroy');
   }
 
 }

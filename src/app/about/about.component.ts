@@ -10,35 +10,35 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnChanges() {
-    console.log('about ng on changes.......');
+    console.log('About - ngOnChanges');
   }
 
   ngOnInit() {
-    console.log('about ng on init.......');
+    console.log('About - ngOnInit');
   }
 
   ngDoCheck() {
-    console.log('about ng do check.......');
+    console.log('About - ngDoCheck');
   }
 
   ngAfterContentInit() {
-    console.log('about ng after content init.......');
+    console.log('About - ngAfterContentInit');
   }
 
   ngAfterContentChecked() {
-    console.log('about ng after content checked.......');
+    console.log('About - ngAfterContentChecked');
   }
 
   ngAfterViewInit() {
-    console.log('about ng after view init.......');
+    console.log('About - ngAfterViewInit');
   }
 
   ngAfterViewChecked() {
-    console.log('about ng after view checked.......');
+    console.log('About - ngAfterViewChecked');
   }
 
   ngOnDestroy() {
-    console.log('about ng on destory...........');
+    console.log('About - ngOnDestroy');
   }
 
 }
